@@ -150,6 +150,9 @@
     footer a { color: var(--muted); }
     footer a:hover { color: var(--accent); }
 
+    /* ── Email spam protection ─────────────────────────────────────── */
+    div.email > span { display: none; }
+
     @media (max-width: 500px) {
       .member { grid-template-columns: 1fr; }
       .member-photo { margin-bottom: 1rem; }
@@ -192,7 +195,8 @@
             <div class="member-links">
               <a class="member-link" href="https://orcid.org/0000-0002-6200-6403" target="_blank" rel="noopener">ORCID</a>
               <a class="member-link" href="https://www.gla.ac.uk/schools/infectionimmunity/staff/tomfenton/" target="_blank" rel="noopener">University profile</a>
-              <a class="member-link" href="mailto:Tom.Fenton@glasgow.ac.uk">Email</a>
+              <div class="email">Tom.<span>REMOVETHIS.</span>Fenton<span>DELETEME@spam.</span>@glasgow.<span>junk.</span>ac.uk</div>
+
             </div>
           </div>
         </div>
