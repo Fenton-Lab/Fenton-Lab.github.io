@@ -12,13 +12,55 @@
       --ink:        #1a1a1a;
       --muted:      #5a5a5a;
       --rule:       #d4d0c8;
-      --bg:         #fafaf8;
+      --bg:         #ffffff;
       --accent:     #003865;   /* Glasgow navy */
       --accent-lt:  #e8eef4;
       --mono:       'Courier New', monospace;
-      --serif:      'EB Garamond', Georgia, serif;
-      --sans:       'Inter', system-ui, sans-serif;
+      --serif:      'DM Sans', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
     }
+
+    /* ── Hero image layout ─────────────────────────────────────────── */
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-image { width: 700px; flex-shrink: 0; }
+    .hero-image img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      display: block;
+    }
+    .hero-image figcaption {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+    @media (max-width: 640px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-image { width: 100%; }
+      .hero-image img { height: 200px; }
+    }
+
+/* ── Banner image ──────────────────────────────────────────────── */
+.banner-image {
+  margin: 2.5rem 0 0 0;
+  width: 100%;
+}
+.banner-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--rule);
+}
 
     /* ── Reset & base ──────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -271,27 +313,37 @@
 
   <main class="page">
 
-    <header class="hero">
+<figure class="banner-image">
+  <img src="images/5B_HE.png" alt="H&E section, human intestinal tissue">
+</figure>
+
+<header class="hero">
       <p class="eyebrow">Mucosal Immunology · University of Glasgow</p>
       <h1>How does inflammation begin in Crohn's disease?</h1>
       <p class="hero-sub">
         We study the earliest immunological events in Crohn's disease, focusing on the mechanisms that drive inflammation within gut-associated lymphoid tissues.
       </p>
       <div class="hero-links">
-        <a class="btn btn-filled" href="publications.html">Publications</a>
+        <a class="btn" href="publications.html">Publications</a>
         <a class="btn" href="team.html">Meet the team</a>
         <a class="btn" href="https://orcid.org/0000-0002-6200-6403" target="_blank" rel="noopener">ORCID ↗</a>
         <a class="btn" href="https://www.gla.ac.uk/schools/infectionimmunity/staff/tomfenton/#grants" target="_blank" rel="noopener">University profile ↗</a>
       </div>
-    </header>
+  </div>
+</header>
+
+    <figure class="hero-image" style="margin: 2.5rem 0;">
+      <img src="images/GC_IF.PNG" alt="Germinal centre immunofluorescence image">
+      <figcaption>Human intestinal barrier</figcaption>
+    </figure>
 
     <section>
       <h2>Research overview</h2>
       <p class="intro-text">
-        Crohn's disease is a chronic inflammatory bowel disease with a poorly understood pathogenesis. Our work centres on gut-associated lymphoid tissue (GALT), particularly Peyer's patches and isolated lymphoid follicle, as the sites of disease initiation.
+        Crohn's disease is a chronic immune-mediated inflammatory bowel disease with a poorly understood pathogenesis. Our work centres on the gut-associated lymphoid tissues (GALT), particularly Peyer's patches and isolated lymphoid follicles, as the sites of disease initiation.
       </p>
       <p class="intro-text">
-        We analyse primary human tissue using state-of-the-art immunology techniques to understand the immune processes that distinguish health from early disease.
+        The first signs of Crohn's inflammation in the gut wall are 'red rings' and 'aphthoid' ulcers, which are symptoms of immune responses becoming damaging. We analyse use state-of-the-art immunology techniques to understand the immune processes that drive these early disease processes.
       </p>
 
       <div class="themes">
