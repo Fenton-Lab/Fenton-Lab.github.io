@@ -298,6 +298,9 @@
     }
     footer a { color: var(--muted); }
     footer a:hover { color: var(--accent); }
+
+    /* ── Email spam protection ─────────────────────────────────────── */
+    div.email > span { display: none; }
   </style>
 </head>
 <body>
@@ -384,7 +387,8 @@
         </div>
         <div class="about-block">
           <strong>Contact</strong>
-          <p><a href="mailto:Tom.Fenton@glasgow.ac.uk">Tom.Fenton@glasgow.ac.uk</a><br>
+          <p><div class="email">Tom.<span>REMOVETHIS.</span>Fenton<span>DELETEME@spam.</span>@glasgow.<span>junk.</span>ac.uk</div>
+<br>
           <a href="https://orcid.org/0000-0002-6200-6403" target="_blank" rel="noopener">ORCID: 0000-0002-6200-6403</a><br>
           <a href="https://www.gla.ac.uk/schools/infectionimmunity/staff/tomfenton/#grants" target="_blank" rel="noopener">University of Glasgow profile</a></p>
         </div>
